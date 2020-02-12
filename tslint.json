@@ -1,0 +1,28 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {
+    "no-unused-expression": true
+  },
+  "rules": {
+    "no-console": {
+      "severity": "warning",
+      "options": ["log", "error", "debug", "info", "time", "timeEnd", "trace"]
+    },
+    "quotemark": [true, "single"],
+    "member-access": [true],
+    "ordered-imports": [true],
+    "max-line-length": [true, 150],
+    "member-ordering": [
+      true,
+      {
+        "order": "instance-sandwich"
+      }
+    ],
+    "interface-name": [false],
+    "indent": [true, "spaces", 2],
+    "arrow-parens": false,
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": []
+}

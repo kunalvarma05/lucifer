@@ -1,0 +1,37 @@
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  image: 'node:lts-alpine'
+  script:
+    - npm config set //${NPM_REGISTRY}/:_authToken ${NPM_TOKEN}
+    - npm config set registry https://${NPM_REGISTRY}
+    - npm install
+    - npm run test -- --collect-coverage
+  coverage: /All files\s*\|\s*([\d\.]+)/
+
+deploy:
+  stage: deploy
+  image: 'python:3.6-alpine3.9'
+  when: manual
+  only:
+    - master
+  script:
+    - apk update
+    - apk add curl jq python py-pip zip build-base nodejs npm
+    - pip install --upgrade pip awscli
+    - mkdir ~/.aws
+    - echo -e "[default] \naws_access_key_id = "$AWS_ACCESS_KEY_ID" \naws_secret_access_key ="$AWS_SECRET_ACCESS_KEY > ~/.aws/credentials
+    - echo -e "[default] \n[profile "$AWS_PROFILE_NAME"] \nrole_arn = "$AWS_ROLE_ARN"\nsource_profile = default"> ~/.aws/config
+    - npm config set //${NPM_REGISTRY}/:_authToken ${NPM_TOKEN}
+    - npm config set registry https://${NPM_REGISTRY}
+    - npm install # Install all the packages
+    - npm run build # Build the app
+    - npm prune --production # Remove dev-dependencies from node_modules
+    - mv node_modules dist # Move node_modules inside dist folder for packaging
+    - cd dist
+    - zip -r ../function.zip .
+    - cd ..
+    - aws lambda update-function-code --function-name $LAMBDA_FUNCTION_NAME --zip-file fileb://function.zip --region $AWS_REGION --profile $AWS_PROFILE_NAME
