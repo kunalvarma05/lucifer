@@ -1,16 +1,5 @@
 import { SlugPolicyRouter } from './routers/slug-policy-router';
-import {
-  Action,
-  AuthRequest,
-  AuthResponse,
-  Policy,
-  PolicyRoute,
-  PolicyRouteHandler,
-  PolicyRouter,
-  ResolvePolicyInput,
-  Resource,
-  Subject,
-} from './types';
+import { AuthRequest, AuthResponse, Policy, PolicyRouter } from './types';
 
 export class Lucifer {
   constructor(private policyRouter: PolicyRouter = new SlugPolicyRouter()) {
@@ -63,11 +52,7 @@ export class Lucifer {
     };
   }
 
-  public route(subject: Subject, action: Action, resource: Resource, handler: PolicyRouteHandler) {
-    return this.policyRouter.route(subject, action, resource, handler);
-  }
-
-  public resolve({ subject, action, resource }: ResolvePolicyInput): PolicyRoute | null {
-    return this.policyRouter.resolve({ subject, action, resource });
+  public router(): PolicyRouter {
+    return this.policyRouter;
   }
 }
