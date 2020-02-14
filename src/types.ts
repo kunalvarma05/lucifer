@@ -43,18 +43,6 @@ export interface AuthResponse {
   message: string;
 }
 
-// Enrich a User (Subject)
-// with its roles
-export type EnrichedUser<U> = U & {
-  roles: string[];
-};
-
-// Enrich a Product (Resource)
-// with its owner
-export type EnrichedProduct<P> = P & {
-  owner: { id: string; associates: { id: string }[] };
-};
-
 export interface PolicyRoute {
   subject: Subject;
   resource: Resource;
@@ -74,7 +62,7 @@ export type Policy = (
 ) => boolean;
 
 export interface PolicyRouteHandler {
-  enrich: {
+  enrich?: {
     subject?: Enricher<Subject>;
     resource?: Enricher<Resource>;
   };
