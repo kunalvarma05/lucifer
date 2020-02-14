@@ -2417,12 +2417,6 @@ img {
 			<a href="globals.html#enrichedobject" class="tsd-kind-icon">Enriched<wbr>Object</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#enrichedproduct" class="tsd-kind-icon">Enriched<wbr>Product</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#enricheduser" class="tsd-kind-icon">Enriched<wbr>User</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 			<a href="globals.html#enricher" class="tsd-kind-icon">Enricher</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
@@ -2511,8 +2505,6 @@ npm install @kunalvarma05/lucifer</code></pre>
 						<h3>Type aliases</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#enrichedobject" class="tsd-kind-icon">Enriched<wbr>Object</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#enrichedproduct" class="tsd-kind-icon">Enriched<wbr>Product</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#enricheduser" class="tsd-kind-icon">Enriched<wbr>User</a></li>
 							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#enricher" class="tsd-kind-icon">Enricher</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#policy" class="tsd-kind-icon">Policy</a></li>
 						</ul>
@@ -2528,7 +2520,7 @@ npm install @kunalvarma05/lucifer</code></pre>
 				<div class="tsd-signature tsd-kind-icon">Enriched<wbr>Object&lt;O&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">O</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in types.ts:65</li>
+						<li>Defined in <a href="https://github.com/kunalvarma05/lucifer/blob/204f9e0/src/types.ts#L53">types.ts:53</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2539,44 +2531,12 @@ npm install @kunalvarma05/lucifer</code></pre>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="enrichedproduct" class="tsd-anchor"></a>
-				<h3>Enriched<wbr>Product</h3>
-				<div class="tsd-signature tsd-kind-icon">Enriched<wbr>Product&lt;P&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">P</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>associates<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in types.ts:54</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>P</h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="enricheduser" class="tsd-anchor"></a>
-				<h3>Enriched<wbr>User</h3>
-				<div class="tsd-signature tsd-kind-icon">Enriched<wbr>User&lt;U&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>roles<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in types.ts:48</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>U</h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
 				<a name="enricher" class="tsd-anchor"></a>
 				<h3>Enricher</h3>
 				<div class="tsd-signature tsd-kind-icon">Enricher&lt;S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#enrichedobject" class="tsd-signature-type">EnrichedObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in types.ts:67</li>
+						<li>Defined in <a href="https://github.com/kunalvarma05/lucifer/blob/204f9e0/src/types.ts#L55">types.ts:55</a></li>
 					</ul>
 				</aside>
 				<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2613,7 +2573,7 @@ npm install @kunalvarma05/lucifer</code></pre>
 				<div class="tsd-signature tsd-kind-icon">Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>subject<span class="tsd-signature-symbol">: </span><a href="globals.html#enrichedobject" class="tsd-signature-type">EnrichedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/subject.html" class="tsd-signature-type">Subject</a><span class="tsd-signature-symbol">&gt;</span>, resource<span class="tsd-signature-symbol">: </span><a href="globals.html#enrichedobject" class="tsd-signature-type">EnrichedObject</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol">&gt;</span>, action<span class="tsd-signature-symbol">: </span><a href="interfaces/action.html" class="tsd-signature-type">Action</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in types.ts:69</li>
+						<li>Defined in <a href="https://github.com/kunalvarma05/lucifer/blob/204f9e0/src/types.ts#L57">types.ts:57</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
