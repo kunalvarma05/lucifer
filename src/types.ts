@@ -52,7 +52,7 @@ export type EnrichedUser<U> = U & {
 // Enrich a Product (Resource)
 // with its owner
 export type EnrichedProduct<P> = P & {
-  owner: { id: string; associates: Array<{ id: string }> };
+  owner: { id: string; associates: { id: string }[] };
 };
 
 export interface PolicyRoute {
