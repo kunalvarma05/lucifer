@@ -8,7 +8,7 @@ ABAC made easy.
 [![Coveralls](https://img.shields.io/coveralls/kunalvarma05/lucifer.svg)](https://coveralls.io/github/kunalvarma05/lucifer)
 [![Dev Dependencies](https://david-dm.org/kunalvarma05/lucifer/dev-status.svg)](https://david-dm.org/kunalvarma05/lucifer?type=dev)
 
-![ ](https://imgur.com/xNOYW7U)
+![ ](https://i.imgur.com/xNOYW7U.png)
 
 ## Usage
 
