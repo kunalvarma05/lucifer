@@ -1,6 +1,12 @@
 os: linux
 language: node_js
 
+node_js:
+  - 12
+  - 11
+  - 10
+  - 9
+
 cache: npm
 
 notifications:
@@ -12,47 +18,15 @@ branches:
 
 jobs:
   include:
-    - &test8
+    - &test
       stage: test
-      node_js: 8
-      script:
-        - npm run test:prod
-    - &test10
-      stage: test
-      node_js: 10
-      script:
-        - npm run test:prod
-    - &test11
-      stage: test
-      node_js: 11
-      script:
-        - npm run test:prod
-    - &test12
-      stage: test
-      node_js: 12
       script:
         - npm run test:prod
       after_success:
         - npm run travis-deploy-once "npm run report-coverage"
 
-    - &build8
+    - &build
       stage: build
-      node_js: 8
-      script:
-        - npm run build
-    - &build10
-      stage: build
-      node_js: 10
-      script:
-        - npm run build
-    - &build11
-      stage: build
-      node_js: 11
-      script:
-        - npm run build
-    - &build12
-      stage: build
-      node_js: 12
       script:
         - npm run build
 
@@ -70,7 +44,7 @@ jobs:
         target_branch: gh-pages
         provider: pages
         cleanup: false
-        keep_history: true
+        keep_history: false
         committer_from_gh: true
         token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
         on:
