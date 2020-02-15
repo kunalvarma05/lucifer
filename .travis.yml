@@ -1,9 +1,5 @@
 os: linux
 language: node_js
-node_js:
-  - 11
-  - 10
-  - 8
 
 cache:
   directories:
@@ -18,15 +14,47 @@ branches:
 
 jobs:
   include:
-    - &test
+    - &test8
       stage: test
+      node_js: 8
+      script:
+        - npm run test:prod
+    - &test10
+      stage: test
+      node_js: 10
+      script:
+        - npm run test:prod
+    - &test11
+      stage: test
+      node_js: 11
+      script:
+        - npm run test:prod
+    - &test12
+      stage: test
+      node_js: 12
       script:
         - npm run test:prod
       after_success:
         - npm run travis-deploy-once "npm run report-coverage"
 
-    - &build
+    - &build8
       stage: build
+      node_js: 8
+      script:
+        - npm run build
+    - &build10
+      stage: build
+      node_js: 10
+      script:
+        - npm run build
+    - &build11
+      stage: build
+      node_js: 11
+      script:
+        - npm run build
+    - &build12
+      stage: build
+      node_js: 12
       script:
         - npm run build
       cache:
