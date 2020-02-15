@@ -9,6 +9,8 @@ node_js:
 
 cache: npm
 
+script: npm ci
+
 notifications:
   email: false
 
@@ -39,13 +41,4 @@ jobs:
       script:
         - npm run build
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run travis-deploy-once "npm run semantic-release"; fi
-      deploy:
-        local_dir: docs
-        target_branch: gh-pages
-        provider: pages
-        cleanup: false
-        keep_history: false
-        committer_from_gh: true
-        token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
-        on:
-          branch: master
+        - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run travis-deploy-once "npm run deploy-docs"; fi
