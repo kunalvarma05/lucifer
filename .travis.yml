@@ -57,11 +57,9 @@ jobs:
         - npm run build
       cache:
         directories:
-          - cache:
-    directories:
-     - $TRAVIS_BUILD_DIR/dist
-     - $TRAVIS_BUILD_DIR/docs
-     - $TRAVIS_BUILD_DIR/coverage
+          - $TRAVIS_BUILD_DIR/dist
+          - $TRAVIS_BUILD_DIR/docs
+          - $TRAVIS_BUILD_DIR/coverage
 
     - &deploy
       stage: deploy
