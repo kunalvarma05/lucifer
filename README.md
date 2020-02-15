@@ -2,11 +2,11 @@
 
 ABAC made easy.
 
+![Travis (.com)](https://img.shields.io/travis/com/kunalvarma05/lucifer?style=flat-square)
+![Coveralls github](https://img.shields.io/coveralls/github/kunalvarma05/lucifer?style=flat-square)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Greenkeeper badge](https://badges.greenkeeper.io/kunalvarma05/lucifer.svg)](https://greenkeeper.io/)
-[![Travis](https://img.shields.io/travis/kunalvarma05/lucifer.svg)](https://travis-ci.org/kunalvarma05/lucifer)
-[![Coveralls](https://img.shields.io/coveralls/kunalvarma05/lucifer.svg)](https://coveralls.io/github/kunalvarma05/lucifer)
-[![Dev Dependencies](https://david-dm.org/kunalvarma05/lucifer/dev-status.svg)](https://david-dm.org/kunalvarma05/lucifer?type=dev)
+![Dev Dependencies](https://img.shields.io/david/dev/kunalvarma05/lucifer?style=flat-square)
 
 ![ ](https://i.imgur.com/xNOYW7U.png)
 
