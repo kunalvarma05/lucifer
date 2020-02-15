@@ -1,9 +1,7 @@
 os: linux
 language: node_js
 
-cache:
-  directories:
-    - ~/.npm
+cache: npm
 
 notifications:
   email: false
@@ -59,7 +57,11 @@ jobs:
         - npm run build
       cache:
         directories:
-          - ~/dist
+          - cache:
+    directories:
+     - $TRAVIS_BUILD_DIR/dist
+     - $TRAVIS_BUILD_DIR/docs
+     - $TRAVIS_BUILD_DIR/coverage
 
     - &deploy
       stage: deploy
