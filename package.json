@@ -1,6 +1,6 @@
 {
   "name": "lucifer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple yet powerful package to build your own ABAC system/service",
   "keywords": [
     "lucifer",
