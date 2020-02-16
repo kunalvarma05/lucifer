@@ -4,8 +4,8 @@ ABAC made easy.
 
 ![Travis (.com)](https://img.shields.io/travis/com/kunalvarma05/lucifer?style=flat-square)
 ![Coveralls github](https://img.shields.io/coveralls/github/kunalvarma05/lucifer?style=flat-square)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Greenkeeper badge](https://badges.greenkeeper.io/kunalvarma05/lucifer.svg)](https://greenkeeper.io/)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Greenkeeper badge](https://badges.greenkeeper.io/kunalvarma05/lucifer.svg?style=flat-square)](https://greenkeeper.io)
 ![Dev Dependencies](https://img.shields.io/david/dev/kunalvarma05/lucifer?style=flat-square)
 
 ![ ](https://i.imgur.com/xNOYW7U.png)
