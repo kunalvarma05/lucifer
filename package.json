@@ -2,6 +2,9 @@
   "name": "@kunalvarma05/lucifer",
   "version": "0.0.1",
   "description": "A simple yet powerful package to build your own ABAC system/service",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "lucifer",
     "abac",
