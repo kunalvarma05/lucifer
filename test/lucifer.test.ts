@@ -1,6 +1,6 @@
 import { Lucifer } from '../src/lucifer';
-import { AuthRequest, EnrichedObject, PolicyRouteHandler, Resource, Subject } from '../src/types';
 import { SlugPolicyRouter } from '../src/routers/slug-policy-router';
+import { AuthRequest, EnrichedObject, PolicyRouteHandler, Resource, Subject } from '../src/types';
 
 /**
  * Dummy test
@@ -160,7 +160,7 @@ describe('Lucifer', () => {
   });
 
   it('can use an injected provider', async () => {
-    const lucifer = new Lucifer(new SlugPolicyRouter());
+    const lucifer = new Lucifer(new SlugPolicyRouter({}));
     const request: AuthRequest = {
       subject: {
         id: '1',
