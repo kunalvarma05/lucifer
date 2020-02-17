@@ -14,9 +14,9 @@
     "authorization",
     "typescript"
   ],
-  "main": "dist/lucifer.umd.js",
-  "module": "dist/lucifer.es5.js",
-  "typings": "dist/types/lucifer.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es5.js",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
